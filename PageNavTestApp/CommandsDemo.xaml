@@ -4,9 +4,48 @@
              x:Class="PageNavTestApp.CommandsDemo"
              Title="CommandsDemo">
     <StackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Button Text="Click Me!"
+                Clicked="Button_Clicked"/>
+        <ImageButton Source="dotnet_bot.svg"
+                     Clicked="ImageButton_Clicked"/>
+       <!--Radio Button-->
+        <RadioButton Content="Option 1"
+               CheckedChanged="RadioButton_CheckedChanged"
+               GroupName="gp1"/>
+        <RadioButton Content="Option 2"
+               CheckedChanged="RadioButton_CheckedChanged"
+               GroupName="gp1"/>
+        <RadioButton Content="Option 3"
+               CheckedChanged="RadioButton_CheckedChanged"
+               GroupName="gp2"/>
+        <RadioButton Content="Option 4"
+               CheckedChanged="RadioButton_CheckedChanged"
+               GroupName="gp2"/>
+        <SearchBar x:Name="Searching"
+                   SearchButtonPressed="Searching_SearchButtonPressed"/>
+
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem
+                        BackgroundColor="Green"
+                        IconImageSource="dotnet_bot.svg"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Archieve"/>
+                    <SwipeItem
+                         BackgroundColor="Red"
+                         IconImageSource="dotnet_bot.svg"
+                         Invoked="SwipeItem_Invoked"
+                         Text="Delete"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid BackgroundColor="Gray"
+                  HeightRequest="50"
+                  WidthRequest="300">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Text="Swipe Right Side"/>
+            </Grid>
+        </SwipeView>
     </StackLayout>
 </ContentPage>

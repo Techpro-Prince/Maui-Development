@@ -49,7 +49,7 @@
                     Padding="16,8"
                     HorizontalOptions="Center">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="50 0 0 50"/>
+                    <RoundRectangle CornerRadius="50, 0, 0, 50"/>
                 </Border.StrokeShape>
                 <Label Text="Dot net Maui"
                        VerticalOptions="Center"
