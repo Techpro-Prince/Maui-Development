@@ -3,14 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PageNavTestApp.PresentationControl"
              Title="PresentationControl">
-    <StackLayout>
-        <BoxView BackgroundColor="Gray" HeightRequest="10" WidthRequest="600"/>
-        <Label Text="DotNet Maui" TextColor="DodgerBlue"
-               FontAttributes="Bold" FontSize="Title"
-               HorizontalOptions="Center"/>
-        <Ellipse Fill="DarkRed" Stroke="Green"
-                 StrokeThickness="12"
-                 HorizontalOptions="Center"
-                 WidthRequest="250"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <BoxView BackgroundColor="Gray" HeightRequest="10" WidthRequest="600" Margin="10"/>
+            <Label Text="DotNet Maui" TextColor="DodgerBlue"
+             FontAttributes="Bold" FontSize="Title"
+             HorizontalOptions="Center"/>
+            <Ellipse Fill="DarkRed" Stroke="Green"
+               StrokeThickness="12"
+               HorizontalOptions="Center"
+               WidthRequest="250"
+               HeightRequest="250"/>
+            <Line Stroke="Red" X1="0" Y1="0" X2="150" Y2="100"
+            StrokeThickness="12"/>
+            <Rectangle Fill="Red" Stroke="Green"
+                 StrokeThickness="10"
+                 HeightRequest="50"
+                 WidthRequest="100"
+                 RadiusX="12"
+                 RadiusY="12"/>
+            <!--<RoundRectangle HeightRequest="150" WidthRequest="150" Stroke="Green" 
+                      StrokeThickness="10"
+                      Fill="DarkRed"
+                      CornerRadius="5"/>-->
+            <Polygon Fill="Blue"
+               Points="50 10 60 70 10 40"
+               Stroke="Brown"
+               StrokeThickness="6"/>
+            <Polygon Fill="Blue"
+        Points="50 10 60 80 10 40"
+        Stroke="Brown"
+        StrokeThickness="6"
+               StrokeDashArray="1,1"
+               StrokeDashOffset="6"/>
+            <Polygon Points="0 0 15 30 40 12 16 9 10 50 90 29"
+                     Stroke="Red"
+                     StrokeThickness="2"/>
+            <Path Aspect="Uniform"
+                  Data="M 10 50 L 100 100 100 50z"
+                  HorizontalOptions="Center"
+                  Stroke="DarkRed" StrokeThickness="5"/>
+            <Border Stroke="yellow"
+                    StrokeThickness="5"
+                    Background="blue"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50 0 0 50"/>
+                </Border.StrokeShape>
+                <Label Text="Dot net Maui"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TextColor="White"/>
+            </Border>
+            <Frame Margin="10"
+                   BackgroundColor="Black"
+                   Padding="10">
+                <Image Source="dotnet_bot.svg"/>
+
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+  
 </ContentPage>
