@@ -5,5 +5,12 @@
              Title="PresentationControl">
     <StackLayout>
         <BoxView BackgroundColor="Gray" HeightRequest="10" WidthRequest="600"/>
+        <Label Text="DotNet Maui" TextColor="DodgerBlue"
+               FontAttributes="Bold" FontSize="Title"
+               HorizontalOptions="Center"/>
+        <Ellipse Fill="DarkRed" Stroke="Green"
+                 StrokeThickness="12"
+                 HorizontalOptions="Center"
+                 WidthRequest="250"/>
     </StackLayout>
 </ContentPage>
