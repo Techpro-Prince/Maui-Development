@@ -34,7 +34,7 @@
         Points="50 10 60 80 10 40"
         Stroke="Brown"
         StrokeThickness="6"
-               StrokeDashArray="1,1"
+               StrokeDashArray="1,1" 
                StrokeDashOffset="6"/>
             <Polygon Points="0 0 15 30 40 12 16 9 10 50 90 29"
                      Stroke="Red"
@@ -64,5 +64,5 @@
             </Frame>
         </StackLayout>
     </ScrollView>
-  
+    
 </ContentPage>
