@@ -6,6 +6,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		var NavPage = new NavigationPage(new MainPage());
-		MainPage = new CommandsDemo();
+		MainPage = new InputControl();
 	}
 }
