@@ -3,10 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PageNavTestApp.InputControl"
              Title="InputControl">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+    <StackLayout>
+        <CheckBox IsChecked="True"/>
+        <Slider x:Name="Slider1"
+                Minimum="0"
+                Maximum="10"
+                MinimumTrackColor="Orange"
+                MaximumTrackColor="Red"
+                ThumbColor="Blue"
+                HeightRequest="15"
+                ValueChanged="Slider1_ValueChanged">
+
+        </Slider>
+        <Label x:Name="resultSlider"
+            Text="Slide To See result Here!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        <Stepper x:Name="Stepper1"
+                 Minimum="1"
+                 Maximum="10"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 ValueChanged="Stepper1_ValueChanged"/>
+        <Switch IsToggled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="20"
+                WidthRequest="20"/>
+        <DatePicker HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        <TimePicker HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+        <Border BackgroundColor="Red">
+            <Entry x:Name="UserTxt" Placeholder="Enter Your Name"
+          PlaceholderColor="LightGray" IsPassword="True"
+          Keyboard="Numeric" TextChanged="UserTxt_TextChanged"
+         Completed="UserTxt_Completed" HorizontalOptions="Center"
+          VerticalOptions="Center"
+          />
+        </Border>
+     
+        <Editor AutoSize="TextChanges" FontSize="20" FontAttributes="Bold"
+                />
+    </StackLayout>
 </ContentPage>
