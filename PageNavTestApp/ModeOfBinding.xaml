@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageNavTestApp.ModeOfBinding"
+             Title="ModeOfBinding">
+    <StackLayout>
+        <!--#region One Time Mode-->
+        <Entry x:Name="FirstName"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Prince Singh"/>
+        <Entry Text="{Binding Source={x:Reference FirstName},Path=Text,Mode=OneTime}"
+               x:Name="LastName"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+       <!--#endregion-->
+        
+        <Border HeightRequest="2" WidthRequest="300" BackgroundColor="Black"/>
+        <!--#region One Way -->
+        <Entry x:Name="FirstNam"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Prince Singh"/>
+        <Entry Text="{Binding Source={x:Reference FirstNam},Path=Text,Mode=OneWay}"
+               x:Name="LastNames"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <!--#endregion-->
+        
+        <Border HeightRequest="2" WidthRequest="300" BackgroundColor="Black"/>
+        <!--#region One Way To Source -->
+        <Entry x:Name="FirstNaame"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Rakesh Singh"/>
+        <Entry Text="{Binding Source={x:Reference FirstNaame},Path=Text,Mode=OneWayToSource}"
+               x:Name="Name"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <!--#endregion-->
+        
+        <Border HeightRequest="2" WidthRequest="300" BackgroundColor="Black"/>
+        <!--#region TWO Way -->
+        <Entry x:Name="FirstNames"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Ronin Singh"/>
+        <Entry Text="{Binding Source={x:Reference FirstNames},Path=Text,Mode=TwoWay}"
+               x:Name="LstName"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <!--#endregion-->
+        
+    </StackLayout>
+</ContentPage>

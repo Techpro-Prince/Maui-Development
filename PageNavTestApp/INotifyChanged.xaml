@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageNavTestApp.INotifyChanged"
+             Title="INotifyChanged">
+    <StackLayout>
+        <Entry x:Name="idTxt"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         Text="{Binding Id}"/>
+
+        <Entry x:Name="nameTxt"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              Text="{Binding Name}"/>
+
+        <Entry x:Name="ageTxt"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              Text="{Binding Age}"/>
+        
+        <Entry x:Name="salaryTxt"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="{Binding Salary}"/>
+
+        <Button Text="Changes" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>
