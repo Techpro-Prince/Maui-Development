@@ -7,15 +7,29 @@ using System.Windows.Input;
 
 namespace PageNavTestApp.ViewModels
 {
+    
     public class CommandExampleVM
     {
-        public ICommand CommandClick =>
-            new Command(ExecuteAlert);
+        public ICommand Command { get; set; }
 
-        private void ExecuteAlert(object obj)
+        public CommandExampleVM()
+        {
+            Command = new Command(CommandClick);
+        }
+
+        private void CommandClick(object obj)
         {
             App.Current.MainPage.DisplayAlert("Hi", "Techpro Compsoft", "Ok");
-        }
+         }
+
+
+        //    public ICommand CommandClick =>
+        //        new Command(ExecuteAlert);
+
+        //    private void ExecuteAlert(object obj)
+        //    {
+        //        App.Current.MainPage.DisplayAlert("Hi", "Techpro Compsoft", "Ok");
+        //    }
 
     }
 }

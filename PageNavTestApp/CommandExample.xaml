@@ -6,7 +6,7 @@
     <StackLayout>
         <Button 
             Text="Click to Command"
-            Command="{Binding CommandClick}"
+            Command="{Binding Command}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </StackLayout>
